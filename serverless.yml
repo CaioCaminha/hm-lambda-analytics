@@ -1,0 +1,15 @@
+service: hm-serverless
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: python3.8
+  versionFunctions: false
+  memorySize: 128
+  region: us-east-1
+
+functions:
+  analytics:
+    handler: handler.hm_analytics
+    timeout: 300
